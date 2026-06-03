@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-crimson: #8B0000;
+  --color-crimson-light: #B22222;
+  --color-crimson-dark: #660000;
+  
+  --color-deep-black: #0A0A0A;
+  --color-deep-black-secondary: #141414;
+  
+  --color-silver: #C0C0C0;
+  --color-silver-light: #E0E0E0;
+  --color-silver-dark: #A0A0A0;
+}
+
+body {
+  background-color: var(--color-deep-black);
+  color: var(--color-silver-light);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Flip Card CSS */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

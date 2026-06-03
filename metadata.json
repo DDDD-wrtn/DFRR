@@ -1,0 +1,6 @@
+{
+  "name": "마왕의 딸과 정략결혼을 해버렸다",
+  "description": "다크 판타지 텍스트 RPG 랜딩 페이지",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
