@@ -89,7 +89,10 @@ export default function CharactersSection() {
             </div>
           </div>
 
-          <div className={`w-full max-w-sm aspect-[3/4] flip-card bg-transparent ${isNight ? 'flipped' : ''}`}>
+          <div 
+            className={`w-full max-w-sm aspect-[3/4] flip-card bg-transparent cursor-pointer ${isNight ? 'flipped' : ''}`}
+            onClick={() => setIsNight(!isNight)}
+          >
             <div className="relative w-full h-full flip-card-inner">
               
               {/* Day */}
@@ -157,13 +160,13 @@ export default function CharactersSection() {
                     className={`group relative overflow-hidden bg-deep-black-secondary border ${faction.theme} rounded-sm aspect-[4/5] flex flex-col justify-end p-5 hover:border-white/50 transition-colors cursor-pointer`}
                   >
                     <div className="absolute inset-0">
-                      <img src={char.img} alt={char.name} className="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/70 to-transparent"></div>
+                      <img src={char.img} alt={char.name} className="w-full h-full object-cover opacity-80 md:opacity-40 grayscale-0 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-80 md:group-hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/80 md:via-deep-black/70 to-transparent"></div>
                     </div>
-                    <div className="relative z-10 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="relative z-10 transform translate-y-0 md:translate-y-6 md:group-hover:translate-y-0 transition-transform duration-500">
                       <span className={`text-xs ${faction.headerColor} mb-1 block font-serif tracking-widest`}>{char.role}</span>
-                      <h4 className="text-xl font-serif text-white mb-3">{char.name}</h4>
-                      <p className="text-xs text-silver-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed font-sans">
+                      <h4 className="text-xl font-serif text-white mb-2 md:mb-3">{char.name}</h4>
+                      <p className="text-xs text-silver-light opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed font-sans">
                         {char.desc}
                       </p>
                     </div>
